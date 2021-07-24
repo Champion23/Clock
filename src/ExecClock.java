@@ -16,7 +16,6 @@ public class ExecClock extends Thread  {
 
       // 使用 多线程 控制 时间变换
      public void ExecTime(){
-
          Thread thread = new Thread(new Runnable() {
              @Override
              public void run() {
@@ -34,12 +33,11 @@ public class ExecClock extends Thread  {
                      }
                  }
              }
-                 });
+         });
          thread.start();
-
      }
+     //开启线程
      public void getTime(){
-        System.out.printf("%d:%d:%d  ",hour.getTime(),minute.getTime(),second.getTime());
          Thread thread1 = new Thread(new Runnable() {
              @Override
              public void run() {
